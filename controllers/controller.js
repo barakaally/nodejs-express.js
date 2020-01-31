@@ -1,19 +1,22 @@
 
+const express = require('express');
+const App = express();
 class controller {
     /**
-    *  @app { Express }
+    *  @param { App } app
     */
     static addRoutes(app) {
-    /**
-     * @ register app routes here
-     */
+        /**
+         * @ register app routes here
+         */
         app.get("/", (req, res) => {
-            res.send({ welcome: `welcome page`});
+            res.send({ welcome: `welcome page` });
         });
 
         app.get("/users", (req, res) => {
             res.send({ welcome: "users page" });
         });
+
     }
 
 }
