@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nodejs-expeess demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title nav" onclick="loadContentPage('/pages/landing/index.html')">
+            <h3>Nodejs-Express</h3>
+        </div>
+        <div class="header-item nav" onclick="loadContentPage('/pages/author/index.html')">
+            <p>About Developer</p>
+        </div>
+        <div class="header-item nav">
+            <p>{ REST API }</p>
+        </div>
+        <div class="header-item hire" onclick="loadContentPage('/pages/author/index.html')">
+            <h3>Hire me</h3>
+        </div>
+    </div>
+    <div style="margin-top: 56px;height:100%">
+        <iframe id="iframe" src="/pages/landing/index.html" frameborder="0" style="width: 100%;height:100%;"></iframe>
+    </div>
+    <script>
+        let iframe = document.getElementById("iframe");
+        function loadContentPage(url) {
+            iframe.src = url;
+        }
+
+    </script>
+</body>
+
+</html>
