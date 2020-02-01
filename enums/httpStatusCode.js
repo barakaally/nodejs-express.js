@@ -3,7 +3,8 @@ const HTTP_STATUS_CODE = {
     forbidden: 403,
     unauthorized: 401,
     created: 201,
-    accepted: 202
+    accepted: 202,
+    nocontent: 204
 }
 
 module.exports = HTTP_STATUS_CODE;
