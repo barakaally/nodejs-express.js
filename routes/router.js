@@ -1,24 +1,23 @@
 const IndexController = require('../controllers/indexController');
 const UserController = require('../controllers/userController');
 const OrderController = require('../controllers/orderController');
+const router = require('express').Router;
 
-const express = require('express');
-const App = express();
 class Router {
     /**
-    *  @param { App } app
+    *  @param { router } router
     */
-    static addRoutes(app) {
+    static addRoutes(router) {
         /**
          * register routes here
          */
 
-        app.get("/", UserController.getUsers);
+        router.get("/", UserController.getUsers);
 
-        app.get("/orders/customer/:id", OrderController.getOrders);
+        router.get("/orders/customer/:id", OrderController.getOrders);
 
-        app.post("/login", IndexController.login);
-
+        router.post("/login", IndexController.login);
+        
     }
 
 }
